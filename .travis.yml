@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t DOCKER-DEMO-IMG -f Dockerfile.dev .
+  - docker build -t docker-demo-img -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true DOCKER-DEMO-IMG npm run test
+  - docker run -e CI=true docker-demo-img npm run test
