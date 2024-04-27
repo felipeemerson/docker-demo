@@ -1,0 +1,9 @@
+FROM node:20.12.2-alpine AS build-phase
+WORKDIR /usr/app
+COPY ./package.json ./
+RUN npm i
+COPY ./ ./
+RUN npm run build
+
+FROM nginx AS deploy-phase
+COPY --from=build-phase /usr/app/dist /usr/share/nginx/html
