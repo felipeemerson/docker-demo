@@ -6,4 +6,5 @@ COPY ./ ./
 RUN npm run build
 
 FROM nginx AS deploy-phase
+EXPOSE 80
 COPY --from=build-phase /usr/app/dist /usr/share/nginx/html
