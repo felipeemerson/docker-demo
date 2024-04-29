@@ -1,4 +1,4 @@
-FROM node:20.12.2-alpine AS build-phase
+FROM node:18.20.2-alpine AS build-phase
 WORKDIR "/usr/app"
 COPY package.json .
 RUN npm i
