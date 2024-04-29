@@ -22,7 +22,7 @@ function App() {
           count is {count}
         </button>
         <p>
-          Bye ther!
+          I was changed on the Feature branch!
         </p>
       </div>
       <p className="read-the-docs">
